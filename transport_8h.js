@@ -6,5 +6,6 @@ var transport_8h =
     [ "smolrtsp_dgram_socket", "transport_8h.html#ad1b0ff08bd0e2464fb4a07819ffa291d", null ],
     [ "smolrtsp_sockaddr_ip", "transport_8h.html#a11c8c610feffcb057982d9eea836f58e", null ],
     [ "smolrtsp_transport_tcp", "transport_8h.html#a7c91426d77ff930a8109d6c3507c5e45", null ],
-    [ "smolrtsp_transport_udp", "transport_8h.html#a3875a72cf6f4cd52bad76d6692979c61", null ]
+    [ "smolrtsp_transport_udp", "transport_8h.html#a3875a72cf6f4cd52bad76d6692979c61", null ],
+    [ "smolrtsp_transport_udp_address", "transport_8h.html#a80fc54632ef94756c338570c0436ad54", null ]
 ];

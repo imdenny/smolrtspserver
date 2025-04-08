@@ -182,6 +182,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3875a72cf6f4cd52bad76d6692979c61" id="r_a3875a72cf6f4cd52bad76d6692979c61"><td class="memItemLeft" align="right" valign="top">SmolRTSP_Transport&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transport_8h.html#a3875a72cf6f4cd52bad76d6692979c61">smolrtsp_transport_udp</a> (int fd) SMOLRTSP_PRIV_MUST_USE</td></tr>
 <tr class="memdesc:a3875a72cf6f4cd52bad76d6692979c61"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new UDP transport.  <br /></td></tr>
 <tr class="separator:a3875a72cf6f4cd52bad76d6692979c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80fc54632ef94756c338570c0436ad54" id="r_a80fc54632ef94756c338570c0436ad54"><td class="memItemLeft" align="right" valign="top">SmolRTSP_Transport&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transport_8h.html#a80fc54632ef94756c338570c0436ad54">smolrtsp_transport_udp_address</a> (int fd, void *addr, size_t len) SMOLRTSP_PRIV_MUST_USE</td></tr>
+<tr class="memdesc:a80fc54632ef94756c338570c0436ad54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new UDP transport with address.  <br /></td></tr>
+<tr class="separator:a80fc54632ef94756c338570c0436ad54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad1b0ff08bd0e2464fb4a07819ffa291d" id="r_ad1b0ff08bd0e2464fb4a07819ffa291d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="transport_8h.html#ad1b0ff08bd0e2464fb4a07819ffa291d">smolrtsp_dgram_socket</a> (int af, const void *restrict addr, uint16_t port) SMOLRTSP_PRIV_MUST_USE</td></tr>
 <tr class="memdesc:ad1b0ff08bd0e2464fb4a07819ffa291d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new datagram socket suitable for <a class="el" href="transport_8h.html#a3875a72cf6f4cd52bad76d6692979c61" title="Creates a new UDP transport.">smolrtsp_transport_udp</a>.  <br /></td></tr>
 <tr class="separator:ad1b0ff08bd0e2464fb4a07819ffa291d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -381,6 +384,53 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section pre"><dt>Precondition</dt><dd><code>fd &gt;= 0</code> </dd></dl>
+
+</div>
+</div>
+<a id="a80fc54632ef94756c338570c0436ad54" name="a80fc54632ef94756c338570c0436ad54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a80fc54632ef94756c338570c0436ad54">&#9670;&#160;</a></span>smolrtsp_transport_udp_address()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">SmolRTSP_Transport smolrtsp_transport_udp_address </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>addr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">size_t&#160;</td>
+          <td class="paramname"><em>len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates a new UDP transport with address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">fd</td><td>The socket file descriptor to be provided with data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>Pointer to address data (e.g., sockaddr_un or sockaddr_in). </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of the address in bytes.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section pre"><dt>Precondition</dt><dd><code>fd &gt;= 0</code> </dd>
+<dd>
+<code>addr &amp;&amp; len &gt; 0</code> </dd></dl>
 
 </div>
 </div>
