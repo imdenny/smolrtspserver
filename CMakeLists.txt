@@ -119,7 +119,7 @@ endif()
 
 # Precompile headers that use Datatype99/Interface99.
 target_precompile_headers(
-  ${PROJECT_NAME} PUBLIC
+  ${PROJECT_NAME} PRIVATE
   include/smolrtsp/types/error.h
   include/smolrtsp/nal/h264.h
   include/smolrtsp/nal/h265.h
