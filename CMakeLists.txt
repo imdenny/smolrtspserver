@@ -117,7 +117,7 @@ if(NOT SMOLRTSP_FULL_MACRO_EXPANSION)
   endif()
 endif()
 
-# 添加版本检查
+# version check
 if(CMAKE_VERSION VERSION_GREATER_EQUAL "3.16.0")
 # Precompile headers that use Datatype99/Interface99.
 target_precompile_headers(
@@ -138,3 +138,17 @@ target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_link_libraries(${PROJECT_NAME} PUBLIC slice99 metalang99 datatype99 interface99)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES C_STANDARD 99 C_STANDARD_REQUIRED ON)
+
+# ========== install rule ==========
+# install lib
+install(TARGETS ${PROJECT_NAME}
+  ARCHIVE DESTINATION lib
+  LIBRARY DESTINATION lib
+  RUNTIME DESTINATION bin
+)
+
+# install header files
+install(DIRECTORY include/
+  DESTINATION include/smolrtsp
+  FILES_MATCHING PATTERN "*.h"
+)
