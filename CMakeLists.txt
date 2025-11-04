@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.15)
 project(smolrtsp LANGUAGES C)
 
 # Fix the warnings about `DOWNLOAD_EXTRACT_TIMESTAMP` in newer CMake versions.
@@ -117,6 +117,8 @@ if(NOT SMOLRTSP_FULL_MACRO_EXPANSION)
   endif()
 endif()
 
+# 添加版本检查
+if(CMAKE_VERSION VERSION_GREATER_EQUAL "3.16.0")
 # Precompile headers that use Datatype99/Interface99.
 target_precompile_headers(
   ${PROJECT_NAME} PRIVATE
@@ -130,6 +132,7 @@ target_precompile_headers(
   include/smolrtsp/controller.h
   include/smolrtsp/rtp_transport.h
   include/smolrtsp/util.h)
+endif()
 
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 target_link_libraries(${PROJECT_NAME} PUBLIC slice99 metalang99 datatype99 interface99)
